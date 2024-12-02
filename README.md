@@ -1,1 +1,1 @@
-# Arch_Linux
+# Configurations
