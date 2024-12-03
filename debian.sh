@@ -7,7 +7,7 @@ sudo apt install -y intel-media-va-driver intel-opencl-icd intel-gpu-tools mesa-
 sudo apt install -y kde-plasma-desktop --no-install-recommends
 
 # Install additional KDE applications
-sudo apt install -y firefox-esr plasma-nm plasma-systemmonitor sddm plasma-workspace-wayland
+sudo apt install -y firefox-esr plasma-nm plasma-systemmonitor sddm plasma-workspace-wayland ffmpeg* kio-extras dolphin-plugins kimageformat-plugins
 
 # Check if the installation was successful
 if [ $? -eq 0 ]; then
