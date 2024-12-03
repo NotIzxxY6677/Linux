@@ -1,0 +1,4 @@
+#For MY Generation Intel CPU
+pacman -S mesa-amber vulkan-intel intel-media-driver
+#For AUR maybe
+pacman -S base-devel pkgstats
