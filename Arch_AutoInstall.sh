@@ -58,9 +58,9 @@ echo "editor no" >> /boot/loader/loader.conf
 
 cat <<BOOT > /boot/loader/entries/arch.conf
 title Arch_Linux
-linux /vmlinuz-linux
+linux /vmlinuz-linux-lts
 initrd /intel-ucode.img
-initrd /initramfs-linux.img
+initrd /initramfs-linux-lts.img
 options root=/dev/sda3 rw
 BOOT
 
