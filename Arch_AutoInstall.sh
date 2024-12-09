@@ -69,7 +69,7 @@ bootctl update
 # End of chroot commands
 EOF
 
-# Install networking tools
+# Install networking tools (ETHERNET)
 pacman -S --noconfirm dhcpcd
 systemctl enable dhcpcd
 
