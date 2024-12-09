@@ -87,7 +87,12 @@ options root=/dev/sda3 rw
 BOOT
 
 bootctl update
+
+# End of chroot commands
 EOF
+
+# Exit chroot
+echo "Exiting chroot environment."
 
 # Unmount and reboot
 umount -R /mnt
