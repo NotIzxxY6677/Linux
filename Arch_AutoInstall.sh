@@ -78,5 +78,4 @@ echo "Exiting chroot environment."
 # Unmount and reboot
 umount -R /mnt
 swapoff -a
-echo "Installation complete! Rebooting..."
-reboot
+echo "Installation complete! Please Reboot"
