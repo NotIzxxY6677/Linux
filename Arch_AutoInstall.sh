@@ -9,6 +9,7 @@ mklabel gpt
 mkpart primary fat32 1MiB 1024MiB
 mkpart primary linux-swap 1025MiB 4096MiB
 mkpart primary ext4 4097MiB 100%
+set 1 boot on
 print
 quit
 EOF
