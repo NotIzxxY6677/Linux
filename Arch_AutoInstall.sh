@@ -25,7 +25,7 @@ mount /dev/sda1 /mnt/boot
 swapon /dev/sda2
 
 # Installing base system
-pacstrap /mnt base linux-lts linux-firmware intel-ucode
+pacstrap /mnt base linux linux-firmware intel-ucode
 
 # Generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab
