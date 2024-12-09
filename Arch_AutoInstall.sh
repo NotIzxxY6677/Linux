@@ -46,7 +46,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 # Hostname
 echo "Arch_Linux" > /etc/hostname
 
-# Root password
+# Root password (NOTE: PLEASE CHANGE YOUR PASSWORD TO A STRONG ONE OR DISABLE ROOT LATER AND USE A NORMAL USER WITH SUDO PERMISSIONS)
 echo "root:password" | chpasswd
 
 # Install bootloader
