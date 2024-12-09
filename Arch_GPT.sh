@@ -5,29 +5,33 @@ timedatectl set-ntp true
 
 # Partitioning
 fdisk /dev/sda <<EOF
-g       # Create GPT partition table
-n       # Create EFI system partition
-1       # Partition number 1
-         # Default start sector
-+2048M  # Size
-t       # Change partition type
-1       # EFI System (type 1)
+g       # Create a new GPT partition table
 
-n       # Create swap partition
-2       # Partition number 2
-         # Default start sector
-+6144M  # Size
+# EFI System Partition
+n       # Create new partition
+1       # Partition number
+        # Default first sector
++512M   # Size for EFI partition
+t       # Change partition type
+1       # EFI System
+
+# Swap Partition
+n       # Create new partition
+2       # Partition number
+        # Default first sector
++2G     # Size for Swap partition
 t       # Change partition type
 2       # Select partition 2
-19      # Linux swap (type 19)
+19      # Linux swap
 
-n       # Create root partition
-3       # Partition number 3
-         # Default start sector
-         # Use remaining space
+# Root Partition
+n       # Create new partition
+3       # Partition number
+        # Default first sector
+        # Use remaining space
 t       # Change partition type
 3       # Select partition 3
-23      # Linux root (type 23)
+23      # Linux root (x86-64)
 
 w       # Write changes and exit
 EOF
