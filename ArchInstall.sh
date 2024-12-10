@@ -73,8 +73,6 @@ bootctl update
 # End of chroot commands
 EOF
 
-
-
 # Exit chroot
 echo "Exiting chroot environment."
 
