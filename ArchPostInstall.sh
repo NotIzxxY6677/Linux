@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bin/bash
 
 #Create a Normal User account MANUALLY.
 pacman -S sudo
