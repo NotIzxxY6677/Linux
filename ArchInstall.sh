@@ -49,6 +49,10 @@ echo "Arch_Linux" > /etc/hostname
 # Root password (NOTE: PLEASE CHANGE YOUR PASSWORD TO A STRONG ONE OR DISABLE ROOT LATER AND USE A NORMAL USER WITH SUDO PERMISSIONS)
 echo "root:password" | chpasswd
 
+# Install networking tools (ETHERNET)
+pacman -S dhcpcd
+systemctl enable dhcpcd
+
 # Install bootloader
 bootctl install
 echo "default arch" > /boot/loader/loader.conf
@@ -69,9 +73,7 @@ bootctl update
 # End of chroot commands
 EOF
 
-# Install networking tools (ETHERNET)
-pacman -S dhcpcd
-systemctl enable dhcpcd
+
 
 # Exit chroot
 echo "Exiting chroot environment."
