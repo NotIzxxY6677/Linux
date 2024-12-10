@@ -7,8 +7,8 @@ timedatectl set-ntp true
 parted /dev/sda <<EOF
 mklabel gpt
 mkpart primary fat32 1MiB 1024MiB
-mkpart primary linux-swap 1025MiB 4096MiB
-mkpart primary ext4 4097MiB 100%
+mkpart primary linux-swap 1025MiB 6144MiB
+mkpart primary ext4 6145MiB 100%
 set 1 boot on
 print
 quit
