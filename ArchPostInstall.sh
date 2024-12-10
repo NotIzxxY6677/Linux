@@ -6,3 +6,6 @@
 #passwd user01
 #<PASSWORD>
 #Uncomment wheel from sudoers file using nano(/etc/sudoers) or vim(visudo).
+
+#Install driver-related packages (pkgstats isn't driver-related):
+sudo pacman -S mesa vulkan-intel pkgstats 
