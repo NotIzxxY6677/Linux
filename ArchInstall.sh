@@ -7,22 +7,21 @@ timedatectl set-ntp true
 parted /dev/sda <<EOF
 mklabel gpt
 mkpart primary fat32 1MiB 1024MiB
-mkpart primary linux-swap 1025MiB 6144MiB
-mkpart primary ext4 6145MiB 100%
+mkpart primary linux-swap 1025MiB 7168MiB
+mkpart primary ext4 7169MiB 100%
 set 1 boot on
 print
 quit
 EOF
 
 # Formatting partitions
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
 
 # Mounting partitions
 mount /dev/sda3 /mnt
-mkdir -p /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
 
 # Installing base system
@@ -77,6 +76,6 @@ EOF
 echo "Exiting chroot environment."
 
 # Unmount and reboot
-umount -R /mnt
-swapoff -a
-echo "Installation complete! Please Reboot"
+# umount -R /mnt
+# swapoff -a
+# echo "Installation complete! Please Reboot"
