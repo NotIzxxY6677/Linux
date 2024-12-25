@@ -31,9 +31,9 @@ mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
 #Mount the disks
+mount /dev/sda3 /mnt
 mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
-mount /dev/sda3 /mnt
 #Install Essential Packages (base system, including kernel and cpu microcode)
 pacstrap -K /mnt base linux-lts linux-firmware intel-ucode
 #Generate an fstab file (Used for Filesystem Table mount/unmount and etc.)
