@@ -25,7 +25,7 @@ mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
 
 # Installing base system
-pacstrap /mnt base linux-lts linux-firmware intel-ucode
+pacstrap /mnt base linux linux-firmware intel-ucode
 
 # Generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -61,9 +61,9 @@ echo "editor no" >> /boot/loader/loader.conf
 
 cat <<BOOT > /boot/loader/entries/arch.conf
 title Arch_Linux
-linux /vmlinuz-linux-lts
+linux /vmlinuz-linux
 initrd /intel-ucode.img
-initrd /initramfs-linux-lts.img
+initrd /initramfs-linux.img
 options root=/dev/sda3 rw
 BOOT
 
@@ -75,7 +75,9 @@ EOF
 # Exit chroot
 echo "Exiting chroot environment."
 
-# Unmount and reboot
-# umount -R /mnt
-# swapoff -a
-# echo "Installation complete! Please Reboot"
+# Unmount
+umount -R /mnt
+swapoff -a
+
+# Base System Installation Complete
+echo "Installation complete! Please reboot and add a non-root user account to the sudo wheel group."
