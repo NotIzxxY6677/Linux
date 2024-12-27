@@ -12,3 +12,10 @@ sudo pacman -S mesa vulkan-intel intel-graphics-compiler intel-gmmlib intel-mete
 
 #Install printer related drivers/apps:
 sudo pacman -S print-manager cups system-config-printer
+
+#Install yay
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay --version
