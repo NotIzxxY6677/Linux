@@ -12,6 +12,3 @@ sudo pacman -S mesa vulkan-intel intel-graphics-compiler intel-gmmlib intel-mete
 
 #Install printer related drivers/apps:
 sudo pacman -S print-manager cups system-config-printer
-
-KDE??
-sudo pacman -Syu plasma-meta konsole 
