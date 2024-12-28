@@ -11,7 +11,7 @@ pacman -S sudo
 sudo pacman -S mesa vulkan-intel intel-graphics-compiler intel-gmmlib intel-metee igsc intel-media-driver libva-utils rkcommon opencl-headers
 
 #Install printer related drivers/apps:
-sudo pacman -S print-manager cups system-config-printer
+sudo pacman -S hplip
 
 #Install yay
 sudo pacman -S --needed base-devel git
